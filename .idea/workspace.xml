@@ -4,22 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2607b4c4-723d-4825-b113-d614244b4643" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayOne/DayOne.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayOne/src/console/Administrator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayOne/src/console/Browser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayOne/src/console/DataProcessing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayOne/src/console/Operator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayOne/src/console/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserManagement.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="2607b4c4-723d-4825-b113-d614244b4643" name="更改" comment="Day one finished.">
+      <change afterPath="$PROJECT_DIR$/DayTwo/DayTwo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayTwo/src/console/AbstractUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayTwo/src/console/Administrator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayTwo/src/console/Browser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayTwo/src/console/DataProcessing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayTwo/src/console/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayTwo/src/console/Operator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DayOne/src/console/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/DayOne/src/console/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DayOne/src/console/DataProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/DayOne/src/console/DataProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DayOne/src/console/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/DayOne/src/console/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +36,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rinki-S&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Rinki-S/2425AW-Java-Exp.git&quot;,
+    &quot;accountId&quot;: &quot;5aed70c6-9ac1-42a2-9ded-62062e999b11&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2oVjOVd0glZwde85ROHNM9NpstB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -55,26 +67,53 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/rinki/Documents/Manual Library/Codes/Java/2425AW_Exp/UserManagement/DayTwo/src/console",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "settings.sync",
     "vue.rearranger.settings.migration": "true",
+    "应用程序.DataProcessing.executor": "Run",
     "应用程序.Main.executor": "Run"
   }
 }]]></component>
+  <component name="QodanaHighlightedReportService">
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="/private/var/folders/vw/q8sgw4rs57n4sz1hpmdj3bl80000gn/T/qodana_output/qodana.sarif.json" />
+        <option name="reportGuid" value="74b86b3f-4905-446e-919f-7928d90fcae2" />
+        <option name="reportName" value="UserManagement/qodana/2024-11-14" />
+      </LocalReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="/private/var/folders/vw/q8sgw4rs57n4sz1hpmdj3bl80000gn/T/qodana_output/qodana.sarif.json" reportGuid="74b86b3f-4905-446e-919f-7928d90fcae2" reportId="UserManagement/qodana/2024-11-14" />
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="" />
       <recent name="console" />
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DayTwo/src/console" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DayTwo/src/console" />
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="console" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -94,7 +133,19 @@
       <option name="presentableId" value="Default" />
       <updated>1730961605033</updated>
       <workItem from="1730961606038" duration="15203000" />
+      <workItem from="1731034373035" duration="2259000" />
+      <workItem from="1731502904595" duration="7779000" />
+      <workItem from="1731567109321" duration="2419000" />
     </task>
+    <task id="LOCAL-00001" summary="Day one finished.">
+      <option name="closed" value="true" />
+      <created>1731035190762</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731035190762</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,5 +161,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Day one finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day one finished." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

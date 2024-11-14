@@ -125,10 +125,11 @@ public class Administrator extends User {
     private static void DeleteUser(Scanner scanner) {
         System.out.println("请输入用户名: ");
         String username = scanner.nextLine();
-        if (DataProcessing.delete(username))
+        if (DataProcessing.delete(username)) {
             System.out.println("成功删除");
-        else
+        } else {
             System.out.println("找不到该用户");
+        }
     }
 
     private static void AddUser(Scanner scanner) {
@@ -141,22 +142,25 @@ public class Administrator extends User {
         scanner.nextLine();
         switch (roleNum) {
             case 1:
-                if (DataProcessing.insert(username, password, "administrator"))
+                if (DataProcessing.insert(username, password, "administrator")) {
                     System.out.println("成功增加用户");
-                else
+                } else {
                     System.out.println("增加失败");
+                }
                 break;
             case 2:
-                if (DataProcessing.insert(username, password, "operator"))
+                if (DataProcessing.insert(username, password, "operator")) {
                     System.out.println("成功增加用户");
-                else
+                } else {
                     System.out.println("增加失败");
+                }
                 break;
             case 3:
-                if (DataProcessing.insert(username, password, "browser"))
+                if (DataProcessing.insert(username, password, "browser")) {
                     System.out.println("成功增加用户");
-                else
+                } else {
                     System.out.println("增加失败");
+                }
                 break;
             default:
                 System.out.println("没有该角色");

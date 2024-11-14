@@ -17,8 +17,9 @@ public abstract class User {
             this.password = password;
             System.out.println("修改成功");
             return true;
-        } else
+        } else {
             return false;
+        }
     }
 
     public abstract void showMenu();
