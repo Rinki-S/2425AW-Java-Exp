@@ -4,19 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2607b4c4-723d-4825-b113-d614244b4643" name="更改" comment="Day one finished.">
-      <change afterPath="$PROJECT_DIR$/DayTwo/DayTwo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayTwo/src/console/AbstractUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayTwo/src/console/Administrator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayTwo/src/console/Browser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayTwo/src/console/DataProcessing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayTwo/src/console/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayTwo/src/console/Operator.java" afterDir="false" />
+    <list default="true" id="2607b4c4-723d-4825-b113-d614244b4643" name="更改" comment="Day two finished.">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayThree/DayThree.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayThree/src/console/AbstractUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayThree/src/console/Administrator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayThree/src/console/Browser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayThree/src/console/DataProcessing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayThree/src/console/Doc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayThree/src/console/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayThree/src/console/Operator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayThree/src/console/getDirectory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayThree/src/console/upload/Doc.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DayOne/src/console/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/DayOne/src/console/Administrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DayOne/src/console/DataProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/DayOne/src/console/DataProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DayOne/src/console/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/DayOne/src/console/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,36 +66,27 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "extract.method.default.visibility": "private",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/rinki/Documents/Manual Library/Codes/Java/2425AW_Exp/UserManagement/DayTwo/src/console",
+    "last_opened_file_path": "/Users/rinki/Documents/Manual Library/Codes/Java/2425AW_Exp/UserManagement/DayThree/src/console",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true",
     "应用程序.DataProcessing.executor": "Run",
-    "应用程序.Main.executor": "Run"
+    "应用程序.Main.executor": "Run",
+    "应用程序.getDirectory.executor": "Run"
   }
 }]]></component>
-  <component name="QodanaHighlightedReportService">
-    <option name="localRunNotPublishedPersistedInfo">
-      <LocalReportPersistedInfo>
-        <option name="path" value="/private/var/folders/vw/q8sgw4rs57n4sz1hpmdj3bl80000gn/T/qodana_output/qodana.sarif.json" />
-        <option name="reportGuid" value="74b86b3f-4905-446e-919f-7928d90fcae2" />
-        <option name="reportName" value="UserManagement/qodana/2024-11-14" />
-      </LocalReportPersistedInfo>
-    </option>
-  </component>
-  <component name="QodanaIsSelectedPersistenceService">
-    <option name="selectedOrLoading" value="true" />
-  </component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="/private/var/folders/vw/q8sgw4rs57n4sz1hpmdj3bl80000gn/T/qodana_output/qodana.sarif.json" reportGuid="74b86b3f-4905-446e-919f-7928d90fcae2" reportId="UserManagement/qodana/2024-11-14" />
@@ -106,9 +98,12 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DayThree/src/console" />
+      <recent name="$PROJECT_DIR$/DayThree/src" />
       <recent name="$PROJECT_DIR$/DayTwo/src/console" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DayThree/src/console/upload" />
       <recent name="$PROJECT_DIR$/DayTwo/src/console" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -119,8 +114,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
       </set>
     </attachedChunks>
   </component>
@@ -135,7 +130,11 @@
       <workItem from="1730961606038" duration="15203000" />
       <workItem from="1731034373035" duration="2259000" />
       <workItem from="1731502904595" duration="7779000" />
-      <workItem from="1731567109321" duration="2419000" />
+      <workItem from="1731567109321" duration="3676000" />
+      <workItem from="1731570799558" duration="6312000" />
+      <workItem from="1731849358022" duration="1318000" />
+      <workItem from="1732168483801" duration="770000" />
+      <workItem from="1732169527344" duration="2304000" />
     </task>
     <task id="LOCAL-00001" summary="Day one finished.">
       <option name="closed" value="true" />
@@ -145,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731035190762</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Day two finished.">
+      <option name="closed" value="true" />
+      <created>1731569774636</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731569774636</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +171,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Day one finished." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day one finished." />
+    <MESSAGE value="Day two finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day two finished." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
