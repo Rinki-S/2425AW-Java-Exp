@@ -9,7 +9,7 @@ import java.sql.Timestamp;
  * @author gongjing
  * &#064;date  2016/10/13
  */
-class Doc implements Serializable {
+public class Doc implements Serializable {
     private String id;
     private String creator;
     private Timestamp timestamp;

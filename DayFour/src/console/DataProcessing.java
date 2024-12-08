@@ -1,24 +1,27 @@
 package console;
 
 import java.io.*;
+import java.sql.*;
 import java.util.Enumeration;
 import java.util.Hashtable;
-import java.sql.*;
 
 /**
- * TODO 数据处理类
- *
- * @author gongjing
- * {@code @date} 2016/10/13
+ * 数据处理类
+ * 负责用户和文档数据的持久化存储和管理
+ * 提供用户认证、文档管理等功能
  */
 public class DataProcessing {
-    // Database connection status (will implement later)
+    // 数据库连接状态（后续实现）
     private static boolean connectToDB = false;
 
-    static Hashtable<String, AbstractUser> users;
-    static Hashtable<String, Doc> docs;
+    // 用户和文档的内存存储
+    static Hashtable<String, AbstractUser> users; // 用户信息哈希表
+    static Hashtable<String, Doc> docs; // 文档信息哈希表
 
-    enum ROLE_ENUM {
+    static String uploadPath = "./DayFour/src/console/upload/";
+    static String downloadPath = "./DayFour/src/console/download/";
+
+    public enum ROLE_ENUM {
         /**
          * administrator
          */
@@ -48,12 +51,14 @@ public class DataProcessing {
     }
 
     /**
-     * TODO 初始化，连接数据库
+     * 系统初始化方法
+     * 负责连接数据库和加载序列化数据
      */
     public static void init() {
         connectToDB = true;
 
-        // Create a file first to make sure that the program can still run when there's no such file
+        // Create a file first to make sure that the program can still run when there's
+        // no such file
         // Program will crash at first run if not do so
         File userFile = new File("user.ser");
         if (userFile.exists()) {
@@ -89,6 +94,10 @@ public class DataProcessing {
         }
     }
 
+    /**
+     * 数据保存方法
+     * 将用户和文档数据序列化到文件
+     */
     public static void saveData() {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("user.ser"))) {
             oos.writeObject(users);
@@ -104,9 +113,10 @@ public class DataProcessing {
     }
 
     /**
-     * TODO 按档案编号搜索档案信息，返回null时表明未找到
+     * 搜索文档
      *
-     * @return Doc
+     * @param id 文档编号
+     * @return 返回查找到的文档对象，未找到返回null
      */
     public static Doc searchDoc(String id) throws SQLException {
         if (!connectToDB) {
@@ -119,9 +129,9 @@ public class DataProcessing {
     }
 
     /**
-     * TODO 列出所有档案信息
+     * 列出所有文档
      *
-     * @return Enumeration<Doc>
+     * @return 返回所有文档的枚举器
      */
     public static Enumeration<Doc> listDoc() throws SQLException {
         if (!connectToDB) {
@@ -132,11 +142,17 @@ public class DataProcessing {
     }
 
     /**
-     * TODO 插入新的档案
+     * 插入新文档
      *
-     * @return boolean
+     * @param id          文档编号
+     * @param creator     创建者
+     * @param timestamp   创建时间
+     * @param description 文档描述
+     * @param filename    文件名
+     * @return 插入成功返回true，失败返回false
      */
-    public static boolean insertDoc(String id, String creator, Timestamp timestamp, String description, String filename) throws SQLException {
+    public static boolean insertDoc(String id, String creator, Timestamp timestamp, String description, String filename)
+            throws SQLException {
         Doc doc;
 
         if (!connectToDB) {
@@ -153,10 +169,66 @@ public class DataProcessing {
     }
 
     /**
-     * TODO 按用户名搜索用户，返回null时表明未找到符合条件的用户
+     * 下载文档文档
+     *
+     * @param targetFile   文档编号
+     * @param downloadPath 下载路径
+     * @return 下载是否成功
+     */
+    public static boolean downloadFile(File targetFile, String downloadPath)
+            throws SQLException, IOException {
+        byte[] buffer = new byte[1024];
+        File tempFile = targetFile;
+        String filename = tempFile.getName();
+
+        BufferedInputStream infile = new BufferedInputStream(new FileInputStream(tempFile));
+        BufferedOutputStream targetfile = new BufferedOutputStream(new FileOutputStream(downloadPath + filename));
+
+        while (true) {
+            int byteRead = infile.read(buffer);
+            if (byteRead == -1) {
+                break;
+            }
+            targetfile.write(buffer, 0, byteRead);
+        }
+        infile.close();
+        targetfile.close();
+        System.out.println("Download complete");
+
+        return true;
+    }
+
+    /**
+     * 上传文档
+     *
+     * @param uploadFile 文件名
+     * @return 上传是否成功
+     */
+    public static boolean uploadFile(File uploadFile) throws IOException {
+        byte[] buffer = new byte[1024];
+        BufferedInputStream infile = new BufferedInputStream(new FileInputStream(uploadFile));
+        BufferedOutputStream targetfile = new BufferedOutputStream(
+                new FileOutputStream(downloadPath + uploadFile.getName()));
+
+        while (true) {
+            int byteRead = infile.read(buffer);
+            if (byteRead == -1) {
+                break;
+            }
+            targetfile.write(buffer, 0, byteRead);
+        }
+        infile.close();
+        targetfile.close();
+        System.out.println("Upload complete");
+
+        return true;
+    }
+
+    /**
+     * 搜索用户
      *
      * @param name 用户名
-     * @return AbstractUser
+     * @return 返回查找到的用户对象，未找到返回null
      */
     public static AbstractUser searchUser(String name) throws SQLException {
         if (!connectToDB) {
@@ -170,11 +242,11 @@ public class DataProcessing {
     }
 
     /**
-     * TODO 按用户名、密码搜索用户，返回null时表明未找到符合条件的用户
+     * 用户登录验证
      *
      * @param name     用户名
      * @param password 密码
-     * @return AbstractUser
+     * @return 验证成功返回用户对象，失败返回null
      */
     public static AbstractUser searchUser(String name, String password) throws SQLException {
         if (!connectToDB) {
@@ -204,12 +276,12 @@ public class DataProcessing {
     }
 
     /**
-     * TODO 修改用户信息
+     * 修改用户信息
      *
      * @param name     用户名
-     * @param password 密码
-     * @param role     角色
-     * @return boolean
+     * @param password 新密码
+     * @param role     新角色
+     * @return 修改成功返回true，失败返回false
      */
     public static boolean updateUser(String name, String password, String role) throws SQLException {
         if (users.containsKey(name)) {
@@ -220,12 +292,12 @@ public class DataProcessing {
     }
 
     /**
-     * TODO 插入新用户
+     * 插入新用户
      *
      * @param name     用户名
      * @param password 密码
      * @param role     角色
-     * @return boolean
+     * @return 插入成功返回true，失败返回false
      */
     public static boolean insertUser(String name, String password, String role) throws SQLException {
         if (users.containsKey(name)) {
@@ -260,7 +332,6 @@ public class DataProcessing {
             return false;
         }
     }
-
 
     public static void main(String[] args) {
     }

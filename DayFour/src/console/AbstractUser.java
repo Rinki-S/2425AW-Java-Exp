@@ -10,7 +10,7 @@ import java.util.Scanner;
  * TODO 抽象用户类，为各用户子类提供模板
  *
  * @author gongjing
- * &#064;date  2016/10/13
+ *         &#064;date 2016/10/13
  */
 public abstract class AbstractUser implements Serializable {
     private String name;
@@ -25,7 +25,6 @@ public abstract class AbstractUser implements Serializable {
         this.password = password;
         this.role = role;
     }
-
 
     /**
      * TODO 修改用户自身信息
@@ -50,7 +49,6 @@ public abstract class AbstractUser implements Serializable {
      * @return boolean 下载是否成功
      */
     public boolean downloadFile(String id) throws SQLException, IOException {
-//boolean result=false;
         byte[] buffer = new byte[1024];
         Doc doc = DataProcessing.searchDoc(id);
 
@@ -136,7 +134,8 @@ public abstract class AbstractUser implements Serializable {
         Doc doc;
         while (e.hasMoreElements()) {
             doc = e.nextElement();
-            System.out.println("Id:" + doc.getId() + "\t Creator:" + doc.getCreator() + "\t Time:" + doc.getTimestamp() + "\t Filename:" + doc.getFilename());
+            System.out.println("Id:" + doc.getId() + "\t Creator:" + doc.getCreator() + "\t Time:" + doc.getTimestamp()
+                    + "\t Filename:" + doc.getFilename());
             System.out.println("Description:" + doc.getDescription());
         }
 
@@ -178,7 +177,6 @@ public abstract class AbstractUser implements Serializable {
     public void setRole(String role) {
         this.role = role;
     }
-
 
     @Override
     public String toString() {

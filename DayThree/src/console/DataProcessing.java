@@ -12,6 +12,7 @@ import java.sql.*;
  * {@code @date} 2016/10/13
  */
 public class DataProcessing {
+    // Database connection status (will implement later)
     private static boolean connectToDB = false;
 
     static Hashtable<String, AbstractUser> users;
@@ -52,8 +53,11 @@ public class DataProcessing {
     public static void init() {
         connectToDB = true;
 
+        // Create a file first to make sure that the program can still run when there's no such file
+        // Program will crash at first run if not do so
         File userFile = new File("user.ser");
         if (userFile.exists()) {
+            // Read data from file if there is one
             try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("user.ser"))) {
                 users = (Hashtable<String, AbstractUser>) ois.readObject();
             } catch (IOException | ClassNotFoundException e) {
@@ -61,6 +65,7 @@ public class DataProcessing {
                 users = new Hashtable<>();
             }
         } else {
+            // Add template data to the file if there isn't one
             users = new Hashtable<>();
             users.put("rose", new Browser("rose", "123", "browser"));
             users.put("jack", new Operator("jack", "123", "operator"));

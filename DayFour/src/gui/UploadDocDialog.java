@@ -1,43 +1,124 @@
-public class uploadDocDialog extends javax.swing.JDialog {
-private javax.swing.JPanel contentPane;
-private javax.swing.JButton buttonOK;
-private javax.swing.JButton buttonCancel;
+package gui;
 
-public uploadDocDialog(){
-setContentPane(contentPane);
-setModal(true);
-getRootPane().setDefaultButton(buttonOK);
+import console.DataProcessing;
+import console.Doc;
+import java.awt.event.*;
+import java.sql.Timestamp;
+import java.io.File;
+import java.sql.SQLException;
+import javax.swing.*;
+import java.io.IOException;
 
-buttonOK.addActionListener(new java.awt.event.ActionListener(){public void actionPerformed(java.awt.event.ActionEvent e){onOK();}});
+public class UploadDocDialog extends JDialog {
+    private JPanel contentPane;
+    private JButton buttonOK;
+    private JButton buttonCancel;
+    private JPanel filePanel;
+    private JButton selectFileButton;
+    private JTextField filePathField;
+    private JTextField idField;
+    private JTextField descriptionField;
+    private JTextField creatorField;
+    private File selectedFile;
+    private Doc doc;
 
-buttonCancel.addActionListener(new java.awt.event.ActionListener(){public void actionPerformed(java.awt.event.ActionEvent e){onCancel();}});
+    public UploadDocDialog() {
+        setContentPane(contentPane);
+        setModal(true);
+        getRootPane().setDefaultButton(buttonOK);
 
- // 点击 X 时调用 onCancel()
-setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-addWindowListener(new java.awt.event.WindowAdapter() {
-  public void windowClosing(java.awt.event.WindowEvent e) {
-   onCancel();
-  }
-});
+        selectFileButton.addActionListener(_ -> {
+            JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            fileChooser.setMultiSelectionEnabled(false);
+            int result = fileChooser.showOpenDialog(this);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                selectedFile = fileChooser.getSelectedFile();
+                filePathField.setText(selectedFile.getAbsolutePath());
+            }
+        });
 
- // 遇到 ESCAPE 时调用 onCancel()
-contentPane.registerKeyboardAction(  new java.awt.event.ActionListener() {    public void actionPerformed(java.awt.event.ActionEvent e) {      onCancel();
-    }  },  javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0),  javax.swing.JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);}
+        buttonOK.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onOK();
+            }
+        });
 
-private void onOK(){
- // 在此处添加您的代码
-dispose();
-}
+        buttonCancel.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onCancel();
+            }
+        });
 
-private void onCancel(){
- // 必要时在此处添加您的代码
-dispose();
-}
+        // 点击 X 时调用 onCancel()
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                onCancel();
+            }
+        });
 
-public static void main(String[] args){
-uploadDocDialog dialog = new uploadDocDialog();
-dialog.pack();
-dialog.setVisible(true);
-System.exit(0);
-}
+        // 遇到 ESCAPE 时调用 onCancel()
+        contentPane.registerKeyboardAction(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onCancel();
+            }
+        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+    }
+
+    private void onOK() {
+        if (selectedFile == null) {
+            JOptionPane.showMessageDialog(this,
+                    "Please select a file first.",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // 创建文档对象
+        Timestamp currentTimestamp = new Timestamp(System.currentTimeMillis());
+        doc = new Doc(idField.getText(),
+                creatorField.getText(),
+                currentTimestamp,
+                descriptionField.getText(),
+                selectedFile.getName());
+
+        try {
+            // 先写入文件
+            DataProcessing.uploadFile(selectedFile);
+            // 再插入数据库记录
+            DataProcessing.insertDoc(doc.getId(),
+                    doc.getCreator(),
+                    doc.getTimestamp(),
+                    doc.getDescription(),
+                    doc.getFilename());
+            dispose();
+        } catch (IOException | SQLException e) {
+            JOptionPane.showMessageDialog(this,
+                    "Error uploading file: " + e.getMessage(),
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+        }
+    }
+
+    private void onCancel() {
+        UploadDocDialog dialog = new UploadDocDialog();
+        dialog.pack();
+        dialog.setVisible(true);
+    }
+
+    public File getSelectedFile() {
+        return selectedFile;
+    }
+
+    public Doc getDoc() {
+        return doc;
+    }
+
+    public static void display() {
+        UploadDocDialog dialog = new UploadDocDialog();
+        dialog.pack();
+        dialog.setVisible(true);
+    }
 }

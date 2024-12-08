@@ -4,20 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2607b4c4-723d-4825-b113-d614244b4643" name="更改" comment="Day two finished.">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayThree/DayThree.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayThree/src/console/AbstractUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayThree/src/console/Administrator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayThree/src/console/Browser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayThree/src/console/DataProcessing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayThree/src/console/Doc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayThree/src/console/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayThree/src/console/Operator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayThree/src/console/getDirectory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DayThree/src/console/upload/Doc.txt" afterDir="false" />
+    <list default="true" id="2607b4c4-723d-4825-b113-d614244b4643" name="更改" comment="Day three finished (including optional contents).">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/flatlaf_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/flatlaf_3_5_2__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/flatlaf_3_5_2__3_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/DayFour.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/console/AbstractUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/console/Administrator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/console/Browser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/console/DataProcessing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/console/Doc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/console/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/console/Operator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/console/download/Doc.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/console/getDirectory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/console/upload/Doc.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/DownloadDocDialog.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/DownloadDocDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/EditUserDialog.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/EditUserDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/LoginFrame.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/LoginFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/MainFrame.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/MainFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/NewUserDialog.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/NewUserDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/SearchUserDialog.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/SearchUserDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/UploadDocDialog.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/UploadDocDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/UserOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/customUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/flatlaf-3.5.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayFour/src/gui/themes/FlatLaf.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DayThree/src/console/flatlaf-3.5.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DayThree/DayThree.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DayThree/DayThree.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DayThree/src/console/DataProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/DayThree/src/console/DataProcessing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,46 +97,101 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "269",
     "extract.method.default.visibility": "private",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/rinki/Documents/Manual Library/Codes/Java/2425AW_Exp/UserManagement/DayThree/src/console",
+    "last_opened_file_path": "/Users/rinki/Documents/Manual Library/Codes/Java/2425AW_Exp/UserManagement/DayThree/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true",
     "应用程序.DataProcessing.executor": "Run",
+    "应用程序.LoginFrame.executor": "Run",
     "应用程序.Main.executor": "Run",
-    "应用程序.getDirectory.executor": "Run"
+    "应用程序.MainFrame.executor": "Run",
+    "应用程序.console.Main.executor": "Run",
+    "应用程序.getDirectory.executor": "Run",
+    "应用程序.newUserDialog.executor": "Run"
   }
 }]]></component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="/private/var/folders/vw/q8sgw4rs57n4sz1hpmdj3bl80000gn/T/qodana_output/qodana.sarif.json" reportGuid="74b86b3f-4905-446e-919f-7928d90fcae2" reportId="UserManagement/qodana/2024-11-14" />
-    </option>
-  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="console" />
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/DayThree/src/console" />
       <recent name="$PROJECT_DIR$/DayThree/src" />
+      <recent name="$PROJECT_DIR$/DayFour/src" />
+      <recent name="$PROJECT_DIR$/DayThree/src/console" />
       <recent name="$PROJECT_DIR$/DayTwo/src/console" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DayFour/src/gui" />
+      <recent name="$PROJECT_DIR$/DayThree/src/console" />
       <recent name="$PROJECT_DIR$/DayThree/src/console/upload" />
       <recent name="$PROJECT_DIR$/DayTwo/src/console" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="gui" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="console" />
     </key>
+  </component>
+  <component name="RunManager" selected="应用程序.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.Main" />
+      <module name="DayFour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NewUserDialog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.NewUserDialog" />
+      <module name="DayFour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="console.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="console.Main" />
+      <module name="DayFour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="console.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Main" />
+        <item itemvalue="应用程序.console.Main" />
+        <item itemvalue="应用程序.NewUserDialog" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -134,7 +216,15 @@
       <workItem from="1731570799558" duration="6312000" />
       <workItem from="1731849358022" duration="1318000" />
       <workItem from="1732168483801" duration="770000" />
-      <workItem from="1732169527344" duration="2304000" />
+      <workItem from="1732169527344" duration="2755000" />
+      <workItem from="1732172296990" duration="1058000" />
+      <workItem from="1732173367572" duration="11158000" />
+      <workItem from="1732241278395" duration="4287000" />
+      <workItem from="1732250335615" duration="5281000" />
+      <workItem from="1732773319905" duration="13132000" />
+      <workItem from="1732886443382" duration="1549000" />
+      <workItem from="1733381349608" duration="19074000" />
+      <workItem from="1733476001305" duration="11086000" />
     </task>
     <task id="LOCAL-00001" summary="Day one finished.">
       <option name="closed" value="true" />
@@ -152,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731569774636</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Day three finished (including optional contents).">
+      <option name="closed" value="true" />
+      <created>1732172170213</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732172170213</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +270,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Day one finished." />
     <MESSAGE value="Day two finished." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day two finished." />
+    <MESSAGE value="Day three finished (including optional contents)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day three finished (including optional contents)." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
